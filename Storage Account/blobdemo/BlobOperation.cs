@@ -18,7 +18,7 @@ namespace blobdemo
             FileUpload();
             Console.ReadLine();
             //Download file
-            DownloadFile("demo2.tet");
+            DownloadFile("demo2.txt");
             Console.ReadLine();
             DeleteFile("demo2.txt");
             Console.ReadLine();
@@ -35,7 +35,6 @@ namespace blobdemo
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
 
             // Create a container for organizing blobs within the storage account.
-            Console.WriteLine("1. Creating Container");
             CloudBlobContainer container = blobClient.GetContainerReference(containerName);
             try
             {
@@ -51,7 +50,9 @@ namespace blobdemo
 
         private static async void FileUpload()
         {
+            Console.WriteLine("1. Creating Container");
             CloudBlobContainer container = await CreateContainer();
+            Console.WriteLine("1. Created Container");
             // Upload a BlockBlob to the newly created container
             Console.WriteLine("2. Uploading BlockBlob");
             CloudBlockBlob blockBlob = container.GetBlockBlobReference(fileToUpload);
@@ -59,6 +60,7 @@ namespace blobdemo
             {
                 blockBlob.Properties.ContentType = "txt";
                 await blockBlob.UploadFromFileAsync(fileToUpload);
+                Console.WriteLine("2. Uploaded BlockBlob");
                 Console.WriteLine("3. List Blobs in Container");
                 foreach (IListBlobItem blob in container.ListBlobs())
                 {
@@ -82,6 +84,7 @@ namespace blobdemo
             {
                 Console.WriteLine("4. Download Blob from {0}", blockBlob.Uri.AbsoluteUri);
                 await blockBlob.DownloadToFileAsync(string.Format("./CopyOf{0}", fileName), FileMode.Create);
+                Console.WriteLine("4. Downloaded Blob from {0}", blockBlob.Uri.AbsoluteUri);
             }
             catch (StorageException)
             {
@@ -99,6 +102,7 @@ namespace blobdemo
             {
                 Console.WriteLine("5. Delet Blob from {0}", blockBlob.Uri.AbsoluteUri);
                 await blockBlob.DeleteIfExistsAsync();
+                Console.WriteLine("5. Deleted Blob from {0}", blockBlob.Uri.AbsoluteUri);
             }
             catch (StorageException)
             {
@@ -112,8 +116,9 @@ namespace blobdemo
             CloudBlobContainer container = await CreateContainer();
             try
             {
-                Console.WriteLine("5. Delet Container from");
+                Console.WriteLine("6. Deleting Container");
                 await container.DeleteIfExistsAsync();
+                Console.WriteLine("6. Deleted Container");
             }
             catch (System.Exception)
             {
