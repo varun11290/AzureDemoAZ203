@@ -16,6 +16,14 @@ namespace blobdemo
 
             //upload file;
             FileUpload();
+            Console.ReadLine();
+            //Download file
+            DownloadFile("demo2.tet");
+            Console.ReadLine();
+            DeleteFile("demo2.txt");
+            Console.ReadLine();
+            DeletContainer();
+            Console.ReadLine();
 
         }
         private static async Task<CloudBlobContainer> CreateContainer()
