@@ -15,11 +15,11 @@ namespace blobdemo
 
             try
             {
-                CloudStorageAccount account = CloudStorageAccount.Parse(connectionString);
-                CloudBlobClient blobClient = account.CreateCloudBlobClient();
+                // CloudStorageAccount account = CloudStorageAccount.Parse(connectionString);
+                // CloudBlobClient blobClient = account.CreateCloudBlobClient();
 
-                //Create(blobClient, containerName);
-                UploadFile(blobClient,containerName,blobName,filName);
+                // //Create(blobClient, containerName);
+                // UploadFile(blobClient,containerName,blobName,filName);
             }
             catch (Exception ex)
             {
