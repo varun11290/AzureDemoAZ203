@@ -9,9 +9,7 @@ namespace blobdemo
         static void Main(string[] args)
         {
             //Geting the values from config files
-            var config = Config.GetConfigValue();
-            var containerName = "demo-test";
-            var connectionString = config["AZURE_STORAGE_CONNECTION_STRING"];
+            
             var blobName="my-photo.json";
             var filName="./Config.json";
 
