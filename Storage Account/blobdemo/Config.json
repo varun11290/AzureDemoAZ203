@@ -1,3 +1,3 @@
 {
-    "AZURE_STORAGE_CONNECTION_STRING":"DefaultEndpointsProtocol=https;AccountName=storagedemo123;AccountKey=rHz1vK3riM8WamGGa9zCnUHKO0lf4y6vITNH57096X46CLsKTwLVCVAhaxjsyPz3o6j5TCzS6pMN20rLi46Qvw==;EndpointSuffix=core.windows.net"
+    "AZURE_STORAGE_CONNECTION_STRING":"<Add your connection>"
 }
