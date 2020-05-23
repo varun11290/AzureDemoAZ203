@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Practice\\azure\\Storage Account\\blobdemo\\blobdemo.csproj": {}
+    "E:\\Practice\\Azure\\Storage Account\\blobdemo\\blobdemo.csproj": {}
   },
   "projects": {
-    "E:\\Practice\\azure\\Storage Account\\blobdemo\\blobdemo.csproj": {
+    "E:\\Practice\\Azure\\Storage Account\\blobdemo\\blobdemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Practice\\azure\\Storage Account\\blobdemo\\blobdemo.csproj",
+        "projectUniqueName": "E:\\Practice\\Azure\\Storage Account\\blobdemo\\blobdemo.csproj",
         "projectName": "blobdemo",
-        "projectPath": "E:\\Practice\\azure\\Storage Account\\blobdemo\\blobdemo.csproj",
+        "projectPath": "E:\\Practice\\Azure\\Storage Account\\blobdemo\\blobdemo.csproj",
         "packagesPath": "C:\\Users\\varun\\.nuget\\packages\\",
-        "outputPath": "E:\\Practice\\azure\\Storage Account\\blobdemo\\obj\\",
+        "outputPath": "E:\\Practice\\Azure\\Storage Account\\blobdemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
